@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import { Footer } from "@/components/footer";
 import Link from "next/link";
+import Image from "next/image";
 import Markdown from "react-markdown";
 import { ModeToggle } from "@/components/mode-toggle";
 import { ChevronUp, ChevronDown, ChevronRight, ArrowRight, Plus } from "lucide-react";
@@ -225,10 +226,12 @@ export default function Page() {
                     <div className="relative aspect-video w-full overflow-hidden rounded-md bg-muted sm:w-64 sm:shrink-0">
                       <div className="h-full w-full relative">
                         {project.image && (
-                          <img
-                            alt={project.title}
-                            className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                          <Image
                             src={project.image}
+                            alt={project.title}
+                            fill
+                            className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           />
                         )}
                       </div>
