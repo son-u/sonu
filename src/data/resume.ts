@@ -76,6 +76,36 @@ export const DATA = {
 
     projects: [
         {
+            title: "AI Conversation & Sales Intelligence",
+            href: "https://github.com/son-u/ai-conversation.git",
+            dates: "",
+            active: true,
+            description:
+                "An AI-powered CRM system that analyzes customer conversations, provides real-time agent assistance, and delivers sales intelligence.",
+            technologies: [
+                "React",
+                "Node.js",
+                "Socket.io",
+                "Python",
+                "MongoDB",
+                "Ollama",
+            ],
+            links: [
+                {
+                    type: "Live",
+                    href: "https://github.com/son-u/ai-conversation.git",
+                    icon: "earth",
+                },
+                {
+                    type: "GitHub",
+                    href: "https://github.com/son-u/ai-conversation.git",
+                    icon: "github",
+                },
+            ],
+            image: "/ai-conversation.png",
+            video: "",
+        },
+        {
             title: "E-Commerce Using MERN Stack",
             href: "https://ecommerce-frontend-2024-rouge.vercel.app/",
             dates: "",
