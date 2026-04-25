@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 
+const BASE_VISITORS = 117;
+
 export function Footer() {
     const [time, setTime] = useState("");
-    const [visitors, setVisitors] = useState(0);
+    const [visitors, setVisitors] = useState(BASE_VISITORS);
 
     useEffect(() => {
         const updateTime = () => {
@@ -23,7 +25,6 @@ export function Footer() {
         const interval = setInterval(updateTime, 1000);
 
         // Fetch from internal proxy to avoid ad-blockers
-        const BASE_VISITORS = 117;
         const hasVisited = sessionStorage.getItem("visited");
 
         // Only increment if not visited in this session
@@ -38,8 +39,11 @@ export function Footer() {
                         sessionStorage.setItem("visited", "true");
                     }
                 }
+                // If API is down, keep the BASE_VISITORS default already set in state
             })
-            .catch((err) => console.error("Error fetching visitors:", err));
+            .catch(() => {
+                // API unavailable — silently keep the fallback BASE_VISITORS count
+            });
 
         return () => clearInterval(interval);
     }, []);

@@ -15,6 +15,6 @@ export async function GET(request: Request) {
         const data = await res.json();
         return NextResponse.json(data);
     } catch (error) {
-        return NextResponse.json({ count: 0 }, { status: 500 });
+        return NextResponse.json({ count: 0 }, { status: 200 });
     }
 }
