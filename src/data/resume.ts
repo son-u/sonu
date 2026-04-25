@@ -9,7 +9,7 @@ export const DATA = {
     description:
         "Freelance Web Developer focused on building accessible, pixel-perfect, minimalist web experiences.",
     summary:
-        "Full-Stack Developer specializing in MERN stack from frontend to backend. Building scalable, high-performance web applications for small business. Open to exciting opportunities.",
+        "Full-Stack Developer specializing in MERN stack from frontend to backend. Building scalable, high-performance web applications for small businesses. Open to exciting opportunities.",
     avatarUrl: "/me.jpg",
     skills: [
         "TypeScript",
@@ -29,8 +29,8 @@ export const DATA = {
         "MySQL",
     ],
     contact: {
-        email: "sunbaeof@gmail.com",
-        tel: "+91 12345 67890",
+        email: "sonumrx37@gmail.com",
+        tel: "+91 9641728247",
         social: {
             GitHub: {
                 name: "GitHub",
@@ -49,28 +49,27 @@ export const DATA = {
             },
             email: {
                 name: "Send Email",
-                url: "mailto:sunbaeof@gmail.com",
+                url: "mailto:sonumrx37@gmail.com",
                 icon: FaEnvelope,
             },
             WhatsApp: {
                 name: "WhatsApp",
-                url: "https://wa.me/918101395176",
+                url: "https://wa.me/919641728247",
                 icon: FaWhatsapp,
             },
         },
     },
     work: [
         {
-            company: "Faiz Dev & Co.",
-            href: "https://faizdevandco.in/",
+            company: "Freelance",
+            href: "",
             badges: [],
             location: "Remote",
             title: "Full Stack Developer",
-            logoUrl: "/fdc-logo.png",
             start: "Dec 2024",
             end: "Present",
             description:
-                "Co-Founder of Web Agency and a Full Stack Developer.\nWorked on 15+ client projects building scalable solutions for small businesses.\nLed the end-to-end development lifecycle, ensuring timely delivery and high-quality standards for all client deliverables.",
+                "Worked with 20+ clients across real-world domains: e-commerce stores, tour & travel agencies, and homestay platforms, turning ideas into fully functional, production-ready web applications.\nBuilt each project from scratch, handling everything from UI design and database architecture to deployment, so clients never had to juggle multiple people to get things done.\nLed the end-to-end development lifecycle, ensuring timely delivery and high-quality standards for all client deliverables.",
         },
     ],
 

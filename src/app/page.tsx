@@ -148,17 +148,23 @@ export default function Page() {
                     <AccordionItem value={work.company} className="border-b-0">
                       <AccordionTrigger className="hover:no-underline py-3 hover:bg-muted/30 rounded-lg px-2 -mx-2 transition-colors duration-200 group">
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between w-full pr-2 gap-1 text-left">
-                          <div className="flex items-center gap-2">
-                            <span className="relative flex overflow-hidden rounded-full h-8 w-8 border shrink-0">
-                              <Avatar className="h-full w-full object-cover">
-                                <AvatarImage
-                                  src={work.logoUrl}
-                                  alt={work.company}
-                                  className="object-cover"
-                                />
-                                <AvatarFallback>{work.company[0]}</AvatarFallback>
-                              </Avatar>
-                            </span>
+                          <div className="flex items-center gap-3">
+                            {"logoUrl" in work && work.logoUrl ? (
+                              <span className="relative flex overflow-hidden rounded-full h-8 w-8 border shrink-0">
+                                <Avatar className="h-full w-full object-cover">
+                                  <AvatarImage
+                                    src={(work as typeof work & { logoUrl: string }).logoUrl}
+                                    alt={work.company}
+                                    className="object-cover"
+                                  />
+                                  <AvatarFallback>{work.company[0]}</AvatarFallback>
+                                </Avatar>
+                              </span>
+                            ) : (
+                              <span className="relative flex items-center justify-center rounded-lg h-9 w-9 shrink-0 bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 text-primary font-bold text-sm shadow-sm">
+                                {work.company[0]}
+                              </span>
+                            )}
                             <div className="flex items-center gap-x-1.5 overflow-hidden min-w-0 flex-1 justify-between">
                               <span className="font-semibold text-base whitespace-nowrap truncate">
                                 {work.company}
@@ -169,7 +175,7 @@ export default function Page() {
                               </span>
                             </div>
                           </div>
-                          <div className="text-xs sm:text-sm text-muted-foreground tabular-nums whitespace-nowrap pl-10 sm:pl-0">
+                          <div className="text-xs sm:text-sm text-muted-foreground tabular-nums whitespace-nowrap pl-12 sm:pl-0">
                             {work.start} - {work.end ?? "Present"}
                           </div>
                         </div>
